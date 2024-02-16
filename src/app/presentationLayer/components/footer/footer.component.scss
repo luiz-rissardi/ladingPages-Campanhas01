@@ -7,7 +7,7 @@
     padding: 30px;
     padding-inline: 100px;
     display: flex;
-    
+
     p {
         color: white;
     }
@@ -102,6 +102,8 @@ a {
     display: none;
     justify-content: end;
     margin-top: -50px;
+    justify-content: center;
+    align-items: center;
 
     @include BreakPoint(desktop-up) {
         display: flex;
@@ -109,9 +111,8 @@ a {
 
     &-icon {
         position: absolute;
-        width: 10% !important;
-        margin-top: 4%;
-        margin-left: -16%;
+        width: 60% !important;
+
 
         @include BreakPoint(tablet-up) {
             width: 20% !important;
@@ -119,15 +120,19 @@ a {
         }
     }
 
-    div {
-        width: 100%;
+    .blob {
+        margin-top: 100px;
+        width: 20%;
+        height: 40%;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        background: linear-gradient(to top, $golden, $darkBlue);
 
-        @include BreakPoint(tablet-up) {
+        img{
             width: 100%;
         }
-    }
-
-    img {
-        width: 100%;
     }
 }
