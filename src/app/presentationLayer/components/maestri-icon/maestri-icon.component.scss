@@ -1,0 +1,32 @@
+@import "../../../../styles.scss";
+
+.iconeMaestri {
+    width: 150px;
+    height: 150px;
+    background-color: #000;
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+    box-shadow: 0 0 4px 0 white;
+
+    @include BreakPoint(mobile-only) {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.visible {
+    animation: slideInRight 500ms ease-in-out;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

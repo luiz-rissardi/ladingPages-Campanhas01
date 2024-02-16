@@ -1,0 +1,82 @@
+<app-header></app-header>
+<app-loader></app-loader>
+<main>
+    <section class="text-center">
+        <p style="color: #fce345; font-size: 1.5rem; font-weight: 900;"> checkout </p>
+        <div class="progress-bar">
+            <span class="progress"></span>
+            <div class="progress-check active">
+                <span class="check"></span>
+            </div>
+            <div class="progress-check active">
+                <span class="check"></span>
+            </div>
+            <div class="progress-check">
+                <span class="check"></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="checkout">
+        <div class="checkout-form">
+            <form [formGroup]="this.registrationForm" class="row mx-0 p-4">
+                <fieldset class="col-12 col-md-6 form-group">
+                    <label for="nome" class="form-label"> Nome </label>
+                    <input type="text" id="nome" class="form-control" placeholder="informe seu nome"
+                        formControlName="nome">
+                    <span class="invalid-feedback" style="display: flex;" *ngIf="this.feedbacks[0].valid == false"> {{
+                        this.feedbacks[0].feedback }} </span>
+                </fieldset>
+                <fieldset class="col-12 col-md-6 form-group">
+                    <label for="phone" class="form-label"> numero de telefone </label>
+                    <input type="text" id="phone" class="form-control"
+                        placeholder="informe seu telefone ex (41) 99999999" formControlName="phone">
+                    <span class="invalid-feedback" style="display: flex;" *ngIf="this.feedbacks[1].valid == false"> {{
+                        this.feedbacks[1].feedback }} </span>
+                </fieldset>
+                <fieldset class="col-12 col-md-6 form-group">
+                    <label for="cpf" class="form-label"> CPF </label>
+                    <input type="text" id="cpf" class="form-control" placeholder="informe seu CPF ex 123.456.789-00"
+                        formControlName="cpf">
+                    <span class="invalid-feedback" style="display: flex;" *ngIf="this.feedbacks[2].valid == false"> {{
+                        this.feedbacks[2].feedback }} </span>
+                </fieldset>
+                <fieldset class="col-12 col-md-6 form-group">
+                    <label for="email" class="form-label"> email </label>
+                    <input type="text" id="email" class="form-control" placeholder="informe seu email"
+                        formControlName="email">
+                    <span class="invalid-feedback" style="display: flex;" *ngIf="this.feedbacks[3].valid == false"> {{
+                        this.feedbacks[3].feedback }} </span>
+                </fieldset>
+                <fieldset class="col-12 col-md-6 form-group">
+                    <label for="course" class="form-label"> escolha um curso </label>
+                    <select class="form-select" id="course" aria-label="Default select example" formControlName="course" (change)="selectCourse()">
+                        <option *ngFor="let course of getCourses(); trackBy: trackItem" [ngValue]="course.id">
+                            {{ course.name }}
+                        </option>
+                    </select>
+                    <span class="invalid-feedback" style="display: flex;" *ngIf="this.feedbacks[4].valid == false"> {{
+                        this.feedbacks[4].feedback }} </span>
+                </fieldset>
+            </form>
+            <aside class="aside">
+                <div class="aside-header">
+                    <span> Área: </span>
+                    <h2> {{ areaName }} </h2>
+                </div>
+                <div class="aside-body">
+                    <div class="d-xl-flex align-items-center gap-3 text-center my-2">
+                        <span class="price"> R${{ priceAverage }} </span>
+                        <span>*Estimativa média de gasto mensal durante 18 meses. O plano é pago de forma integral. <br>
+                            *A
+                            estimativa mensal pode variar de acordo com o tempo de duração de cada curso </span>
+                    </div>
+                </div>
+                <div class="aside-footer">
+                    <span> valor integral: <span class="price"> R$1.412 </span> </span>
+                    <button class="btn btn-personality" (click)="enroll()"> matricular-se </button>
+                </div>
+            </aside>
+        </div>
+    </section>
+</main>

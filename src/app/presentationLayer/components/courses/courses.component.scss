@@ -1,0 +1,195 @@
+@import "../../../../styles.scss";
+
+.courses-title{
+    text-align: center;
+    font-size: 2rem;
+    background: linear-gradient(to bottom, $golden,$secondaryGold);
+    background-clip: text;
+    color: transparent;
+}
+
+.previous-button,.next-button{
+    position: relative;
+    background-color: transparent;
+    border: none;
+    font-size: 5rem;
+    font-weight: 900;
+    font-family: monospace;
+    background: linear-gradient(to right,$softWhite,$golden);
+    background-clip: text;
+    color: transparent;
+}
+
+.previous-button{
+    margin-right: 70%;
+    top: -350px;
+    
+    @include BreakPoint(mobile-only){
+        top: -250px;
+    }
+}
+
+.next-button{
+    margin-left: 70%;
+    top: -470px;
+
+    @include BreakPoint(mobile-only){
+        top: -370px;
+    }
+}
+
+.slide-title{
+    position: absolute;
+    top: 330px;
+    color: $softWhite;
+    z-index: 3;
+    font-size: 1.2rem;
+    text-transform:capitalize;
+}
+
+.scene {
+    margin: 40px 0;
+    position: relative;
+    width: 340px;
+    height: 450px;
+    margin: 40px auto;
+    margin-top: 100px;
+    perspective:1000px;
+
+    @include BreakPoint(mobile-only) {
+        width: 270px;
+        height: 320px;
+    }
+}
+
+.carousel {
+    width: 100%;
+    position: absolute;
+    transform: translateZ(-288px);
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.carousel__cell {
+    position: absolute;
+    width: 350px;
+    height: 320px;
+    max-width: 320px;
+    left: 10px;
+    top: 10px;
+    line-height: 116px;
+    font-size: 80px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+
+    @include BreakPoint(mobile-only) {
+        width: 250px;
+        height: 320px;
+    }
+}
+
+.backgroundFilter{
+    transition: 500ms ease-in;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    background: rgb(0,0,0,0.8);
+}
+
+
+.carousel__cell:nth-child(1) {
+    transform: rotateY(0deg) translateZ(500px);
+
+    @include BreakPoint(mobile-only) {
+        transform: rotateY(0deg) translateZ(400px);
+
+    }
+}
+
+.carousel__cell:nth-child(2) {
+    transform: rotateY(36deg) translateZ(500px);
+
+    @include BreakPoint(mobile-only) {
+        transform: rotateY(36deg) translateZ(400px);
+
+    }
+}
+
+.carousel__cell:nth-child(3) {
+    transform: rotateY(36deg *2) translateZ(500px);
+
+    @include BreakPoint(mobile-only) {
+        transform: rotateY(36deg* 2) translateZ(400px);
+
+    }
+}
+
+.carousel__cell:nth-child(4) {
+    transform: rotateY(36deg*3) translateZ(500px);
+
+    @include BreakPoint(mobile-only) {
+        transform: rotateY(36deg*3) translateZ(400px);
+
+    }
+}
+
+.carousel__cell:nth-child(5) {
+    transform: rotateY(36deg*4) translateZ(500px);
+
+    @include BreakPoint(mobile-only) {
+        transform: rotateY(36deg*4) translateZ(400px);
+
+    }
+}
+
+.carousel__cell:nth-child(6) {
+    transform: rotateY(36deg*5) translateZ(500px);
+
+    @include BreakPoint(mobile-only) {
+        transform: rotateY(36deg*5) translateZ(400px);
+
+    }
+}
+
+.carousel__cell:nth-child(7) {
+    transform: rotateY(36deg*6) translateZ(500px);
+
+    @include BreakPoint(mobile-only) {
+        transform: rotateY(36deg*6) translateZ(400px);
+
+    }
+}
+
+.carousel__cell:nth-child(8) {
+    transform: rotateY(36deg*7) translateZ(500px);
+
+    @include BreakPoint(mobile-only) {
+        transform: rotateY(36deg*7) translateZ(400px);
+
+    }
+}
+
+.carousel__cell:nth-child(9) {
+    transform: rotateY(36deg*8) translateZ(500px);
+
+    @include BreakPoint(mobile-only) {
+        transform: rotateY(36deg*8) translateZ(400px);
+    }
+
+}
+
+.carousel__cell:nth-child(10) {
+    transform: rotateY(36deg*9) translateZ(500px);
+    @include BreakPoint(mobile-only) {
+        transform: rotateY(36deg*9) translateZ(400px);
+    }
+}
+.carousel__cell:nth-child(11) {
+    transform: rotateY(36deg*10) translateZ(500px);
+    @include BreakPoint(mobile-only) {
+        transform: rotateY(36deg*10) translateZ(400px);
+    }
+}

@@ -1,0 +1,39 @@
+@import "../../../../styles.scss";
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    z-index: 11;
+    background: rgb(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+}
+
+.loader {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 8px solid $softWhite;
+    border-top: 8px solid transparent;
+    position: relative;
+    z-index: 12;
+    animation: loader 1s linear infinite;
+}
+
+p {
+    position: absolute;
+    font-size: 2rem;
+    color: $softWhite;
+}
+
+@keyframes loader {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+
+
+}

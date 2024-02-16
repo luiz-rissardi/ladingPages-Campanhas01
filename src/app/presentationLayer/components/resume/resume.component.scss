@@ -1,0 +1,121 @@
+@import "../../../../styles.scss";
+
+
+.resume {
+    color: $softWhite;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: justify;
+    display: flex;
+    margin-left: 10%;
+
+    pre {
+        @include BreakPoint(tablet-up) {
+            white-space: normal;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            margin: 0;
+        }
+
+        @include BreakPoint(mobile-only) {
+            white-space: normal;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            margin: 0;
+            display: flex;
+            text-wrap: wrap;
+            font-size: 0.9rem;
+        }
+    }
+
+
+    @include BreakPoint(mobile-only) {
+        font-size: 1rem;
+        font-weight: 500;
+        margin: 1%;
+    }
+
+    @include BreakPoint(tablet-up) {
+        font-size: 1rem;
+        font-weight: 500;
+        margin: 5%;
+    }
+}
+
+
+.marketing {
+
+    &-Section {
+        width: 45vw;
+        height: auto;
+        overflow: hidden;
+        border-radius: 40%;
+        margin-left: -100px;
+
+        @include BreakPoint(tablet-up) {
+            display: none;
+            margin-left: -400px;
+        }
+
+        @include BreakPoint(mobile-only) {
+            display: none;
+        }
+
+        @include BreakPoint(desktop-md-up) {
+            width: 50vw;
+            margin-left: -200px;
+        }
+    }
+
+    &-Image {
+        width: 100%;
+        background-color: transparent;
+        filter: opacity(0.5) saturate(1);
+        z-index: 1;
+        border-radius: 50%;
+
+        @include BreakPoint(desktop-md-up) {
+            margin-left: -150px;
+            width: 50vw;
+        }
+    }
+
+}
+
+.showResume {
+    @include BreakPoint(desktop-md-up) {
+        animation: toRight 2s ease-in-out;
+    }
+
+    @include BreakPoint(desktop-up) {
+        animation: toRight 2s ease-in-out;
+    }
+}
+
+.showResume2 {
+    @include BreakPoint(desktop-md-up) {
+        animation: toLeft 2s ease-in-out;
+    }
+
+    @include BreakPoint(desktop-up) {
+        animation: toLeft 2.5s ease-in-out;
+    }
+}
+
+
+@keyframes toRight {
+    0% {
+        margin-left: -200px;
+        opacity: 0;
+    }
+}
+
+@keyframes toLeft {
+    0% {
+        margin-left: 900px;
+        opacity: 0;
+    }
+
+}

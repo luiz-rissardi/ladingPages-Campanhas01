@@ -1,0 +1,200 @@
+@import "../../../../styles.scss";
+
+
+img {
+    width: 100%;
+    max-height: 90vh;
+}
+
+.student {
+    &-Section{
+        width: 40%;
+        position: absolute;
+        max-height: 80vh;
+        left: 50%;
+        top: 10%;
+
+        @include BreakPoint(tablet-up){
+            display: none;
+        }
+
+        @include BreakPoint(mobile-only){
+            display: none;
+        }
+
+        @include BreakPoint(desktop-md-up){
+            top: 22%;
+        }
+    }
+
+    &-Image {
+        width: 100%;
+        background-color: transparent;
+        filter: brightness(0.7) saturate(1);
+        z-index: 1;
+        margin-right: 100px;
+        margin-top: 10%;
+
+        @include BreakPoint(desktop-up){
+            margin-top: 5%;
+        }
+    }
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+
+    &-btn{
+        width: 30%;
+        height: 10vh;
+        text-decoration: none;
+        font-size: 1.3rem;
+        font-weight: 500;
+        list-style: none;
+        background: linear-gradient(to left, rgb(255, 196, 3), $softWhite 20%, rgb(255, 196, 3));
+        color: $backGroundColor;
+        position: absolute;
+        top: 80%;
+        left: 38%;
+        border-radius: 50px;
+        z-index: 10;
+        border: 0;
+        transition: 200ms ease-in;
+
+        &:hover{
+            opacity: 0.7;
+            width: 28%;
+            height: 9vh;
+            left: 39%;
+            transition: 200ms ease-in;
+        }
+
+        @include BreakPoint(mobile-only){
+            font-size: 0.9rem;
+            width: 60%;
+            left: 20%;
+            height: 5vh;
+            top: 45%;
+
+            &:hover{
+                opacity: 1;
+                width: 60%;
+                height: 5vh;
+                font-size: 0.9rem;
+                left: 20%;
+            }
+        }
+
+        @include BreakPoint(tablet-up){
+            font-size: 1.3rem;
+            width: 45%;
+            left: 27.5%;
+            height: 10vh;
+            top: 55%;
+
+            &:hover{
+                width: 40%;
+                height: 8;
+                left: 30%;
+                font-size: 1.2rem;
+            }
+        }
+
+        
+    }
+
+    &-text {
+        position: absolute;
+        top: 18%;
+        left: 10%;
+        animation: toRigth 2s ease-out;
+
+        @include BreakPoint(mobile-only) {
+            top: 18%;
+        }
+    }
+
+    &-title {
+        font-size: 4rem;
+        background-image: linear-gradient($golden,$golden, $softWhite);
+        background-clip: text;
+        color: transparent;
+        font-weight: 900;
+
+        @include BreakPoint(mobile-only) {
+            font-size: 1.5rem;
+        }
+
+        @include BreakPoint(tablet-up) {
+            font-size: 2.5rem;
+        }
+
+        @include BreakPoint(desktop-up) {
+            font-size: 4rem;
+        }
+    }
+
+    &-subtitle {
+
+        font-size: 2rem;
+        color: $softWhite;
+
+        @include BreakPoint(mobile-only) {
+            font-size: 0.8rem;
+            margin-top: 10px;
+        }
+
+        @include BreakPoint(tablet-up) {
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.backgroundImage {
+    position: absolute;
+    width: 100%;
+    height: 20vh;
+
+    &-Top {
+        background: linear-gradient(to bottom, #000, transparent);
+    }
+
+    &-Bottom {
+        position: relative;
+        bottom: 20vh;
+        background: linear-gradient(to top, #000, transparent);
+        @include BreakPoint(mobile-only) {
+            bottom: 10vh;
+        }
+    }
+
+    @include BreakPoint(mobile-only) {
+        height: 10vh;
+    }
+}
+
+@keyframes toRigth {
+    0% {
+        left: 0;
+    }
+}
+
+
+.ShowStudent {
+    @include BreakPoint(desktop-md-up) {
+        animation: toLeft 2s ease-in-out;
+    }
+    @include BreakPoint(desktop-up) {
+        animation: toLeft 2s ease-in-out;
+    }
+}
+
+@keyframes toLeft {
+    0% {
+        margin-left: 55px;
+        opacity: 0;
+    }
+
+}

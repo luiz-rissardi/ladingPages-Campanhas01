@@ -1,0 +1,29 @@
+@import "../../../../styles.scss";
+
+.apresentation{
+
+    width: 80%;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: auto;
+    background-image: linear-gradient($golden, $softWhite);
+    background-clip: text;
+    color: transparent;
+    font-weight: 500;
+    
+    @include BreakPoint(desktop-up){
+        margin-top: 90px;
+    }
+
+    @include BreakPoint(mobile-only){
+        font-size: 1rem;
+    }
+
+    @include BreakPoint(tablet-up){
+        font-size: 1.3rem;
+    }
+}
+
+p{
+    margin: 0;
+}

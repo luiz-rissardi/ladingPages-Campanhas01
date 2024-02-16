@@ -1,0 +1,19 @@
+<section class="container-fluid d-block" style="margin-top: 100px; margin-bottom: 100px;">
+    <div class="cards">
+        <section class="d-flex flex-wrap justify-content-center">
+            <div class="card mx-3 my-3 m-auto border-0 area" style="width: 300px; height: auto;"
+                *ngFor="let area of this.areas">
+                <img src="{{area.src}}" class="card-img-top" style="height: 25vh;" alt="{{area.label}}">
+                <div class="card-body">
+                    <button class="buy my-5" (click)="toCheckout(area.label)"> Quero me matricular </button>
+                    <h5 class="mb-3 text-center">{{ area.label }} </h5>
+                    <ul class="courses">
+                        <li class="mt-2" *ngFor="let course of area.courses">
+                            {{ course }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>

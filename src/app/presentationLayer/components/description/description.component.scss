@@ -1,0 +1,117 @@
+@import "../../../../styles.scss";
+
+.article {
+    width: 35%;
+    height: fit-content;
+    margin: 1%;
+    box-shadow: 0 1px 0 0 $softWhite;
+    border-left: 6px solid $golden;
+    border-top: 6px solid $softWhite;
+    font-size: 1.3rem;
+    padding: 10px;
+    background-image: linear-gradient($golden, $softWhite);
+    background-clip: text;
+    color: transparent;
+    font-weight: 500;
+    z-index: 2;
+    text-align:left;
+
+    @include BreakPoint(mobile-only) {
+        width: auto;
+        max-width: 450px;
+        font-size: 1rem;
+        margin-top: 2vh;
+        margin: 2%;
+        font-weight: 500;
+    }
+
+    @include BreakPoint(tablet-up) {
+        width: 40%;
+        font-size: 0.9rem;
+    }
+
+    @include BreakPoint(desktop-md-up) {
+        font-size: 1rem;
+    }
+
+    &-title {
+        font-weight: 700;
+        margin-bottom: 3vh;
+        color: $softWhite;
+    }
+}
+
+.marketing {
+
+    &-Section{
+        width: 50vw;
+        height: auto;
+        overflow: hidden;
+        border-radius: 40%;
+        margin-left: -100px;
+
+        @include BreakPoint(tablet-up){
+            display: none;
+        }
+
+        @include BreakPoint(mobile-only){
+            display: none;
+        }
+
+        @include BreakPoint(desktop-md-up){
+            width: 100vw;
+        }
+
+        
+
+    }
+
+    &-Image {
+        width: 50vw;
+        background-color: transparent;
+        filter:opacity(0.5) saturate(1);
+        z-index: 1;
+        margin-right: 100px;
+    }
+
+}
+
+.descriptions-tilte {
+    text-align: center;
+    font-size: 2rem;
+    background: linear-gradient(to top, $golden, $secondaryGold);
+    background-clip: text;
+    color: transparent;
+}
+
+
+.to_top {
+    margin-top: -40px;
+
+    &:last-child {
+        @include BreakPoint(tablet-up) {
+            margin-top: -7%;
+        }
+    }
+
+    @include BreakPoint(mobile-only) {
+        margin-top: 2vh;
+    }
+}
+
+.Showdescriptions {
+    @include BreakPoint(desktop-md-up) {
+        animation: toRight 2s ease-in-out;
+    }
+    @include BreakPoint(desktop-up) {
+        animation: toRight 2s ease-in-out;
+    }
+}
+
+@keyframes toRight {
+    0% {
+        margin-left: -500px;
+        opacity: 0;
+    }
+
+}

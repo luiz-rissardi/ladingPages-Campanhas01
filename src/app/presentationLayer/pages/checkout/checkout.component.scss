@@ -1,0 +1,199 @@
+@import "../../../../styles.scss";
+
+
+main{
+    height: 85vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, #000, $backGroundColor, rgb(1, 1, 88));
+}
+
+.checkout {
+    width: 100%;
+    height: 74vh;
+    display: flex;
+    flex-wrap: wrap;
+
+    &-form {
+        display: flex;
+        width: 80%;
+        height: auto;
+        margin-inline: auto;
+        margin-top: 40px;
+        flex-wrap: wrap;
+        gap: 2%;
+        
+        @include BreakPoint(mobile-only) {
+            margin-top: 0;
+            width: 98%;
+        }
+        
+        @include BreakPoint(tablet-up) {
+            width: 98%;
+        }
+        
+        @include BreakPoint(desktop-md-up){
+            max-height: 70vh;
+        }
+
+        form {
+            width: 60%;
+            height: auto;
+            max-height: 68vh;
+            background: $softWhite;
+            border-radius: 30px;
+
+            @include BreakPoint(mobile-only) {
+                width: 100%;
+                height: 74%;
+                border-radius: 30px 30px 0 0;
+            }
+        }
+    }
+}
+
+.aside {
+    width: 38%;
+    height: auto;
+    max-height: 68vh;
+    background: $softWhite;
+    border-radius: 30px;
+    padding: 20px;
+    display: block;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    h2{
+        font-weight: 900;
+        background: linear-gradient(to right, $backGroundColor, rgb(11, 23, 192));
+        background-clip: text;
+        color: transparent;
+    }
+
+    &-header{
+        background: rgb(1, 1, 88);
+        background-clip: text;
+        color:transparent;
+        height: auto;
+        border-bottom: 1px solid $backGroundColor;
+    }
+
+    &-body{
+        background: $midnightBlue;
+        background-clip: text;
+        color:transparent;
+        height: auto;
+        border-bottom: 1px solid $backGroundColor;
+
+        span{
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 1rem;
+            font-weight: 900;
+        }
+
+        .price{
+            font-size: 2rem;
+            justify-content: center;
+            color: $accentGreen
+        }
+    }
+
+    &-footer{
+        display: flex;
+        flex-direction: column;
+
+        span{
+            margin-top: 10px;
+            font-size: 2rem;
+            font-weight: 500;
+
+            .price{
+                color: $accentGreen;
+                font-weight: 900;
+            }
+
+            @include BreakPoint(tablet-up){
+                font-size: 1.2rem;
+            }
+
+            @include BreakPoint(desktop-md-up){
+                font-size: 1.5rem;
+            }
+
+            @include BreakPoint(desktop-up){
+                font-size: 2rem;
+            }
+        }
+    }
+
+    @include BreakPoint(mobile-only) {
+        width: 100%;
+        border-radius: 0 0 30px 30px;
+    }
+}
+
+.btn{
+    &-personality{
+        background:linear-gradient(to left,$golden,$softWhite 20%,$golden);
+        color: black;
+        font-weight: 400;
+        font-size: 1.3rem;
+
+        @include BreakPoint(desktop-md-up){
+            margin-top: 20px;
+        }
+    }
+}
+
+
+
+.progress {
+    position: absolute;
+    background-color: $accentGreen;
+    width: 50%;
+    height: 1vh;
+
+    &-bar {
+        position: relative;
+        width: 50%;
+        height: 1vh;
+        background: rgb($darkGray, 0.5);
+        margin-top: 30px;
+        overflow: visible;
+        border-radius: 5px;
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        transition: 1s ease-in;
+        margin-inline: 25%;
+
+        @include BreakPoint(mobile-only) {
+            width: 90%;
+            margin-inline: 5% !important;
+            margin-bottom: 30px;
+        }
+    }
+
+    &-check {
+        width: 30px;
+        height: 30px;
+        background: $darkGray;
+        border-radius: 50%;
+        display: flex;
+        z-index: 2;
+
+        .check {
+            width: 10px;
+            height: 10px;
+            margin: auto;
+            border-radius: 50%;
+            background-color:#fff;
+        }
+    }
+}
+
+.active {
+    background-color: $accentGreen !important;
+}

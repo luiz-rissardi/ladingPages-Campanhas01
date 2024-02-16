@@ -1,0 +1,39 @@
+<app-header></app-header>
+<main>
+    <section class="text-center">
+        <p style="color: #fce345; font-size: 1.5rem; font-weight: 900;"> Pagamento </p>
+        <p style="color: #fce345; font-size: 1.2rem"> escanheie o QR CODE para efetuar o pagamento integral </p>
+        <div class="progress-bar">
+            <span class="progress"></span>
+            <div class="progress-check active">
+                <span class="check"></span>
+            </div>
+            <div class="progress-check active">
+                <span class="check"></span>
+            </div>
+            <div class="progress-check active">
+                <span class="check"></span>
+            </div>
+        </div>
+    </section>
+    <section class="confirm">
+        <div class="backgroundImage backgroundImage-Top"></div>
+        <div class="backgroundImage backgroundImage-Bottom"></div>
+        <div class="backgroundImage backgroundImage-Left"></div>
+        <div class="backgroundImage backgroundImage-Right"></div>
+        <img class="confirm-img" src="../../../../assets/maestriEduBackgroud.webp" alt="banner-maestri">
+        <div class="banner">
+            <div class="banner-text">
+                <p>
+                    Assim que o pagamento for confirmado, entraremos em contato para fornecer mais informações sobre a
+                    matrícula.
+                </p>
+        
+                <button class="btn ok w-75 mx-auto" (click)="ok()"> ok </button>
+            </div>
+            <div class="w-50 d-flex">
+                <img class="me-5" src="../../../../assets/qrcode.webp" alt="qr code pix">
+            </div>
+        </div>
+    </section>
+</main>

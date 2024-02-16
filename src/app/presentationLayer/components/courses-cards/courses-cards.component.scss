@@ -1,0 +1,66 @@
+@import "../../../../styles.scss";
+
+.card-img-top{
+    box-shadow: 0 0 4px 0 $softWhite;
+}
+
+.cards {
+    width: 100%;
+    margin: auto;
+}
+
+
+.card-body {
+    background: linear-gradient(to bottom, $backGroundColor, rgb(3, 3, 49));
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 0 4px 0 $softWhite;
+
+    h5 {
+        color: $golden;
+        border-bottom: 1px solid white;
+        text-transform: capitalize;
+    }
+}
+
+.courses {
+
+    height: 42vh;
+    overflow-y: scroll;
+
+    @include BreakPoint(mobile-only) {
+        height: 39vh;
+    }
+
+    li {
+        color: $softWhite;
+        text-transform: capitalize;
+    }
+}
+
+.buy {
+    border: 0;
+    border-radius: 20px;
+    width: 100%;
+    height: 7vh;
+    margin-top: 20px !important;
+    background: linear-gradient(to left, rgb(255, 196, 3), $golden 70%, rgb(255, 196, 3));
+    color: $backGroundColor;
+    font-weight: 500;
+    transition: 500ms ease;
+
+    &:hover {
+        transition: 500ms ease-in-out;
+        background: linear-gradient(to left, rgb(0, 0, 134), rgb(13, 13, 206) 20%, rgb(0, 0, 134));
+        color: white;
+    }
+}
+
+.area {
+    transition: 200ms ease-in;
+
+    &:hover {
+        transition: 200ms ease-in;
+        width: 305px !important;
+        box-shadow: 0 0 30px 0 $softWhite;
+    }
+}

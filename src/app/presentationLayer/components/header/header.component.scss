@@ -1,0 +1,52 @@
+@import "../../../../styles.scss";
+
+.header {
+    width: 100%;
+    height: 15vh;
+    background-color: #000;
+    color: $golden;
+    display: flex;
+    align-items: center;
+    padding-inline: 50px;
+
+    img{
+        width: 9vw;
+
+        @include BreakPoint(mobile-only){
+            width: 20vw;
+        }
+
+        @include BreakPoint(tablet-up){
+            width: 10vw;
+        }
+    }
+}
+
+.navButton {
+    color: $golden;
+
+    &:hover {
+        ~.line {
+            width: 100%;
+            transition: 1s ease;
+        }
+
+        color: $softWhite !important;
+    }
+
+    &:focus{
+        color: $softWhite !important;
+    }
+}
+
+.lineActive {
+    width: 100% !important;
+}
+
+.line {
+    width: 0%;
+    height: 2px;
+    background-color: $golden;
+    transition: 1s ease;
+}
+
